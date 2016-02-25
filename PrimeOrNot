@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+	
+public class PrimeOrNot {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Initialize The Scanner
+		Scanner scan = new Scanner(System.in);
+		
+		//Boolean Statement to say isPrime = True
+		boolean isPrime=true;
+
+		//Iniliatize the IsItPrime and the Temp (to be used to check whether prime or not)
+		int IsItPrime = 0;
+		int temp;
+		
+		//Ask for Input
+		System.out.println("Type a number to check whether it is a prime number or not:");
+		IsItPrime = scan.nextInt();
+		
+		//Check whether it is prime or not using a for loop
+		for(int i=2;i<=IsItPrime/2;i++)
+		{
+	           temp=IsItPrime%i;
+		   if(temp==0)
+		   {
+		      isPrime=false;
+		      break;
+		   }
+		}
+		
+		//If it is a prime number: 
+		if (isPrime)
+		System.out.println("The Number " + IsItPrime +" IS a prime number");
+		// If it is not a prime number:
+		else
+		System.out.println("The Number " + IsItPrime + " IS NOT a prime number");
+	
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("This assignment was completed successfully");
+	}
+
+}
